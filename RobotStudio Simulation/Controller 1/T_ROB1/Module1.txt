@@ -1,0 +1,538 @@
+MODULE Module1
+    CONST robtarget ApproxPoint_ConnectingRod3:=[[-0.000130667,-64.635232825,241.316140549],[0.000055374,0.005645805,-0.999935956,0.009808442],[-2,-1,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget AttachPoint_ConnectingRod3:=[[-0.000115028,-69.006915055,18.499215999],[0.00005538,0.005645839,-0.999935956,0.009808438],[-1,-1,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_ContainerBox3:=[[-2.704970755,79.175311308,360.071410163],[0.114707189,-0.262598833,-0.877956879,0.383504671],[-2,-1,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget DetachPoint1_ContainerBox3:=[[-82.245,7.565,18.5],[0,0,1,0],[-2,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Home:=[[605.152521874,0,800.1],[0.5,0,0.866025404,0],[0,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_ConnectingRod4:=[[-5.332475496,40.626636,221.504180703],[0.049973208,-0.029042231,0.970076502,-0.23581944],[-2,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget AttachPoint_ConnectingRod4:=[[0.203312845,-68.656649092,18.659337688],[0.001146578,-0.002401035,0.999965585,-0.007858117],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget DetachPoint2_ContainerBox3:=[[0,8.442,18.5],[0,0,1,0],[-2,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_ConnectingRod6:=[[-14.200229528,3.659626236,-221.783064717],[0.955544098,0.245569468,0.158900449,0.037172027],[-2,-1,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget AttachPoint_ConnectingRod6:=[[-0.064190882,-68.576319758,6.273370021],[0.999895051,0.007581868,-0.006340951,0.010592224],[-1,-1,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget DetachPoint3_ContainerBox3:=[[81.81,7.213,18.5],[0,0,1,0],[-2,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget AttachPoint_ConnectingRod2:=[[-0.000214317,-68.937910401,6.002128505],[0.999804939,0.019590006,-0.000049235,0.002512789],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_ConnectingRod2:=[[-0.000187648,-58.278485997,-265.903219047],[0.949811726,0.003002579,-0.312785345,-0.003741373],[0,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget DetachPoint4_ContainerBox3:=[[-82.245,7.565,50.5],[0,0,1,0],[-2,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget AttachPoint_ConnectingRod5:=[[-1.068194077,-69.28442229,18.611321719],[0.000917885,0.004136659,0.999988383,0.002297526],[0,-1,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_ConnectingRod5:=[[-9.213325467,-111.771997828,292.413039399],[0.027094218,0.004195384,0.999621685,0.002188445],[0,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget DetachPoint5_ContainerBox3:=[[0,8.442,50.5],[0,0,1,0],[-2,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_ConnectingRod1:=[[0.915953104,-62.165356081,268.355456035],[0.231640018,-0.005063263,0.972124676,0.035928802],[0,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget AttachPoint_ConnectingRod1:=[[0.915934312,-67.067235779,18.460434319],[0.001378962,0.000740195,-0.999998069,0.001188427],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget DetachPoint6_ContainerBox3:=[[81.81,7.213,50.5],[0,0,1,0],[-2,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_ContainerBox4:=[[-42.095,46.35,452.009],[0,0,0.940080026,-0.340953876],[-1,-1,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget DetachPoint1_ContainerBox4:=[[-84.956,-83.424709055,9],[0,0,1,0],[-2,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget DetachPoint2_ContainerBox4:=[[-85.772,-2.84,9],[0,0,1,0],[-2,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget DetachPoint3_ContainerBox4:=[[-82.552,80.084,9],[0,0,1,0],[-2,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget DetachPoint4_ContainerBox4:=[[85.13,-78.146,9],[0,0,1,0],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget DetachPoint5_ContainerBox4:=[[82.594,82.429,9],[0,0,1,0],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget DetachPoint6_ContainerBox4:=[[11.466,0,9],[0,0,1,0],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_Piston1:=[[1.105421513,1.758482019,299.502046377],[0.012514781,0.030011301,-0.999141626,0.025665414],[0,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget AttachPoint_Piston1:=[[-0.098094764,-0.024874562,9.000428739],[0.000005364,-0.020945923,-0.99978061,-0.000005021],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_Piston2:=[[-51.349228286,-5.312168908,252.998530622],[0.001105296,0.999987655,0.003573363,-0.003271005],[0,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget AttachPoint_Piston2:=[[0.000368528,-0.000535792,8.999887144],[0.001105296,0.999987655,0.003573363,-0.003271005],[0,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_Piston3:=[[-4.664147911,4.873799267,285.174556413],[0.00000015,0.999924816,0.000000238,-0.012262219],[0,-1,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget AttachPoint_Piston3:=[[0.000405092,-0.000087451,9.000263783],[-0.00000015,0.999924816,0.000000238,-0.012262219],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_Piston4:=[[0.026620489,-0.006672786,236.362750018],[0.000029127,0.000302238,-0.999999954,-0.000005687],[-1,-1,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget AttachPoint_Piston4:=[[0.013360796,-0.004097243,9.000344391],[0.000029127,0.000302238,-0.999999954,-0.000005687],[-1,-1,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_Piston5:=[[0.907455267,14.961030373,324.032452949],[0.000030226,0.005590113,-0.999984375,0.000012066],[-1,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget AttachPoint_Piston5:=[[-0.000376423,0.000134227,9.000303374],[0.000030226,0.005590113,-0.999984375,0.000012066],[-1,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_Piston6:=[[0.039243071,7.246787642,162.615423125],[0.000075072,-0.000418879,-0.999999909,-0.0000051],[0,-1,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget AttachPoint_Piston6:=[[0.000454333,-0.000079624,9.000427482],[0.000075072,-0.000418879,-0.999999909,-0.0000051],[0,0,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint1_ContainerBox4:=[[-77.973286337,-80.50792995,276.912882041],[0,0,1,-0.000000008],[-2,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint2_ContainerBox4:=[[-84.992018911,0.000009889,283.683885597],[0.000000001,0,1,0.000000022],[-2,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint3_ContainerBox4:=[[-82.552024913,86.084023754,337.04489263],[-0.000000001,0,1,-0.000000023],[-2,-1,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint4_ContainerBox4:=[[85.1299808,-78.145966259,253.340316117],[0.000000008,0,1,-0.000000037],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint5_ContainerBox4:=[[82.594006794,82.4285985,269.318866498],[0,0,1,0],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint6_ContainerBox4:=[[11.465959344,0.000016186,254.997766998],[-0.000000006,0,1,0.000000051],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint3_ContainerBox3:=[[81.809994666,7.212995497,304.23849548],[-0.000000003,0,1,-0.000000007],[-2,-1,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint1_ContainerBox3:=[[-82.244944044,7.564934891,256.507399946],[-0.000000004,0,1,-0.000000007],[-2,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint2_ContainerBox3:=[[-0.000047288,8.442075396,246.968798923],[-0.000000004,0,1,-0.000000007],[-2,-1,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_ContainerBox2:=[[-13.701876782,819.333002837,526.508284129],[0,0.707106781,0.707106781,0],[1,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget DetachPoint_ConnectingRod:=[[-1.566,708.983,313.911401955],[0,0.707106781,0.707106781,0],[1,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget DetachPoint_Piston:=[[-13.702,785.833,298.689],[0,0.707106781,0.707106781,0],[1,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_Home:=[[700.999979788,0.000008319,711.100034951],[0.000000116,0,1,0.000000053],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget DetachPoint_PistonPin:=[[-38.585,869.474411635,316.372],[0.000000001,0.71325045,0.700909264,0.000000001],[1,-1,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_PistonPin2:=[[-55.266692742,-221.077420943,60.950428828],[0.70211802,-0.701422239,0.089481025,-0.083846735],[-1,0,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget AttachPoint_PistonPin2:=[[-2.007973329,-8.731837982,60.950413909],[0.702118021,-0.701422235,0.089480994,-0.083846792],[-1,-1,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_PistonPin1:=[[-273.951653813,0.167737029,0.000026813],[0.500945959,0.49905224,0.500945966,0.499052249],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget AttachPoint_PistonPin1:=[[-9.37,0.167725965,0.000028461],[0.500945944,0.499052263,0.500945944,0.499052263],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_PistonPin3:=[[-0.445105394,-392.622578842,60.999977827],[0.707102424,-0.707109507,-0.001068639,-0.001078784],[-1,-1,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget AttachPoint_PistonPin3:=[[-0.438418633,-9.43899235,60.999978078],[0.707102433,-0.707109499,-0.001068638,-0.001078759],[-1,-1,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_PistonPin4:=[[-0.034644841,-244.165812283,60.999901691],[0.707052122,-0.70705194,0.008805345,0.008792988],[0,-1,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget AttachPoint_PistonPin4:=[[-0.030544248,-9.404999442,60.999953267],[0.707052107,-0.707051955,0.008805321,0.008792978],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_PistonPin5:=[[-0.042251692,-230.182594684,0.000009271],[0.001875906,-0.001863565,0.707104295,0.707104323],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget AttachPoint_PistonPin5:=[[-0.038439484,-9.405999331,-0.000018773],[0.001875884,-0.001863542,0.707104325,0.707104293],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget ApproxPoint_PistonPin6:=[[-183.456450776,-183.836884923,0.000161057],[0.273883607,0.270520939,0.646898778,0.658276661],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget AttachPoint_PistonPin6:=[[-6.537652068,-6.856309169,0.00013782],[0.273883593,0.270520954,0.646898768,0.65827667],[0,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+
+    !Variables 
+    Var num i:=0;
+    VAR num hola:=0;
+    PERS socketstatus socketStat1;
+
+    !Variable to detect running mode
+    PERS bool RUN:=FALSE;
+
+    !Variables to select next item
+    PERS bool Item:=FALSE;
+    PERS string mydata:="Piston6";
+    PERS bool Ready;
+
+    PROC Pieces_Separation()
+
+        IF mydata="ConnectingRod1" THEN
+            !Separation of Connecting Rod 1
+            Item:=FALSE;
+            Ready:=FALSE;
+            waitTime 0.5;
+            MoveL ApproxPoint_ConnectingRod1,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ConnectingRod1;
+            MoveLDO AttachPoint_ConnectingRod1,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ConnectingRod1,vacuum,1;
+            WaitDI vacuum_switch,1;
+            MoveL ApproxPoint_ConnectingRod1,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ConnectingRod1;
+            MoveL ApproxPoint3_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+            MoveLDO DetachPoint6_ContainerBox3,v200,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3,vacuum,0;
+            WaitDI vacuum_switch,0;
+            MoveL ApproxPoint3_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+            Item:=TRUE;
+            waitTime 0.5;
+        ENDIF
+
+        IF mydata="ConnectingRod2" THEN
+            !Separation of Connecting Rod 2
+            Item:=FALSE;
+            Ready:=FALSE;
+            waitTime 0.5;
+            MoveL ApproxPoint_ConnectingRod2,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ConnectingRod2;
+            MoveLDO AttachPoint_ConnectingRod2,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ConnectingRod2,vacuum,1;
+            WaitDI vacuum_switch,1;
+            MoveL ApproxPoint_ConnectingRod2,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ConnectingRod2;
+            MoveL ApproxPoint2_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+            MoveLDO DetachPoint2_ContainerBox3,v200,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3,vacuum,0;
+            WaitDI vacuum_switch,0;
+            MoveL ApproxPoint2_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+            Item:=TRUE;
+            waitTime 0.5;
+        ENDIF
+
+        IF mydata="ConnectingRod3" THEN
+            !Separation of Connecting Rod 3
+            Item:=FALSE;
+            Ready:=FALSE;
+            waitTime 0.5;
+            MoveL ApproxPoint_ConnectingRod3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ConnectingRod3;
+            MoveLDO AttachPoint_ConnectingRod3,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ConnectingRod3,vacuum,1;
+            WaitDI vacuum_switch,1;
+            MoveL ApproxPoint_ConnectingRod3,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ConnectingRod3;
+            MoveL ApproxPoint1_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+            MoveLDO DetachPoint4_ContainerBox3,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3,vacuum,0;
+            WaitDI vacuum_switch,0;
+            MoveL ApproxPoint1_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+            Item:=TRUE;
+            waitTime 0.5;
+        ENDIF
+
+        IF mydata="ConnectingRod4" THEN
+            !Separation of Connecting Rod 4
+            Item:=FALSE;
+            Ready:=FALSE;
+            waitTime 0.5;
+            MoveL ApproxPoint_ConnectingRod4,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ConnectingRod4;
+            MoveLDO AttachPoint_ConnectingRod4,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ConnectingRod4,vacuum,1;
+            WaitDI vacuum_switch,1;
+            MoveL ApproxPoint_ConnectingRod4,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ConnectingRod4;
+            MoveL ApproxPoint3_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+            MoveLDO DetachPoint3_ContainerBox3,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3,vacuum,0;
+            WaitDI vacuum_switch,0;
+            MoveL ApproxPoint3_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+            Item:=TRUE;
+            waitTime 0.5;
+        ENDIF
+
+        IF mydata="ConnectingRod5" THEN
+            !Separation of Connecting Rod 5
+            Item:=FALSE;
+            Ready:=FALSE;
+            waitTime 0.5;
+            MoveL ApproxPoint_ConnectingRod5,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ConnectingRod5;
+            MoveLDO AttachPoint_ConnectingRod5,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ConnectingRod5,vacuum,1;
+            WaitDI vacuum_switch,1;
+            MoveL ApproxPoint_ConnectingRod5,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ConnectingRod5;
+            MoveL ApproxPoint2_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+            MoveLDO DetachPoint5_ContainerBox3,v200,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3,vacuum,0;
+            WaitDI vacuum_switch,0;
+            MoveL ApproxPoint2_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+            Item:=TRUE;
+            waitTime 0.5;
+        ENDIF
+
+        IF mydata="ConnectingRod6" THEN
+            !Separation of Connecting Rod 6
+            Item:=FALSE;
+            Ready:=FALSE;
+            waitTime 0.5;
+            MoveL ApproxPoint_ConnectingRod6,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ConnectingRod6;
+            MoveLDO AttachPoint_ConnectingRod6,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ConnectingRod6,vacuum,1;
+            WaitDI vacuum_switch,1;
+            MoveL ApproxPoint_ConnectingRod6,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ConnectingRod6;
+            MoveL ApproxPoint1_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+            MoveLDO DetachPoint1_ContainerBox3,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3,vacuum,0;
+            WaitDI vacuum_switch,0;
+            MoveL ApproxPoint1_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+            Item:=TRUE;
+            waitTime 0.5;
+        ENDIF
+
+
+        IF mydata="Piston1" THEN
+            !Separation of Piston 1
+            Item:=FALSE;
+            Ready:=FALSE;
+            waitTime 0.5;
+            MoveL ApproxPoint_Piston1,v800,fine,Vacuum_Gripper_TCP\WObj:=Wobj_Piston1;
+            MoveLDO AttachPoint_Piston1,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_Piston1,vacuum,1;
+            WaitDI vacuum_switch,1;
+            MoveL ApproxPoint_Piston1,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_Piston1;
+            MoveL ApproxPoint1_ContainerBox4,v800,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+            MoveLDO DetachPoint1_ContainerBox4,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4,vacuum,0;
+            WaitDI vacuum_switch,0;
+            MoveL ApproxPoint1_ContainerBox4,v800,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+            Item:=TRUE;
+            waitTime 0.5;
+        ENDIF
+
+        IF mydata="Piston2" THEN
+            !Separation of Piston 2
+            Item:=FALSE;
+            Ready:=FALSE;
+            waitTime 0.5;
+            MoveL ApproxPoint_Piston2,v800,fine,Vacuum_Gripper_TCP\WObj:=Wobj_Piston2;
+            MoveLDO AttachPoint_Piston2,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_Piston2,vacuum,1;
+            WaitDI vacuum_switch,1;
+            MoveL ApproxPoint_Piston2,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_Piston2;
+            MoveL ApproxPoint2_ContainerBox4,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+            MoveLDO DetachPoint2_ContainerBox4,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4,vacuum,0;
+            WaitDI vacuum_switch,0;
+            MoveL ApproxPoint2_ContainerBox4,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+            Item:=TRUE;
+            waitTime 0.5;
+        ENDIF
+
+        IF mydata="Piston3" THEN
+            !Separation of Piston 3
+            Item:=FALSE;
+            Ready:=FALSE;
+            waitTime 0.5;
+            MoveL ApproxPoint_Piston3,v800,fine,Vacuum_Gripper_TCP\WObj:=Wobj_Piston3;
+            MoveLDO AttachPoint_Piston3,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_Piston3,vacuum,1;
+            WaitDI vacuum_switch,1;
+            MoveL ApproxPoint_Piston3,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_Piston3;
+            MoveL ApproxPoint5_ContainerBox4,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+            MoveLDO DetachPoint5_ContainerBox4,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4,vacuum,0;
+            WaitDI vacuum_switch,0;
+            MoveL ApproxPoint5_ContainerBox4,v800,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+            Item:=TRUE;
+            waitTime 0.5;
+        ENDIF
+
+        IF mydata="Piston4" THEN
+            !Separation of Piston 4
+            Item:=FALSE;
+            Ready:=FALSE;
+            waitTime 0.5;
+            MoveL ApproxPoint_Piston4,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_Piston4;
+            MoveLDO AttachPoint_Piston4,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_Piston4,vacuum,1;
+            WaitDI vacuum_switch,1;
+            MoveL ApproxPoint_Piston4,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_Piston4;
+            MoveL ApproxPoint3_ContainerBox4,v800,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+            MoveLDO DetachPoint3_ContainerBox4,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4,vacuum,0;
+            WaitDI vacuum_switch,0;
+            MoveL ApproxPoint3_ContainerBox4,v800,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+            Item:=TRUE;
+            waitTime 0.5;
+        ENDIF
+
+        IF mydata="Piston5" THEN
+            !Separation of Piston 5
+            Item:=FALSE;
+            Ready:=FALSE;
+            waitTime 0.5;
+            MoveL ApproxPoint_Piston5,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_Piston5;
+            MoveLDO AttachPoint_Piston5,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_Piston5,vacuum,1;
+            WaitDI vacuum_switch,1;
+            MoveL ApproxPoint_Piston5,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_Piston5;
+            MoveL ApproxPoint4_ContainerBox4,v800,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+            MoveLDO DetachPoint4_ContainerBox4,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4,vacuum,0;
+            WaitDI vacuum_switch,0;
+            MoveL ApproxPoint4_ContainerBox4,v800,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+            Item:=TRUE;
+            waitTime 0.5;
+        ENDIF
+
+        IF mydata="Piston6" THEN
+            !Separation of Piston 6
+            Item:=FALSE;
+            Ready:=FALSE;
+            waitTime 0.5;
+            MoveL ApproxPoint_Piston6,v800,fine,Vacuum_Gripper_TCP\WObj:=Wobj_Piston6;
+            MoveLDO AttachPoint_Piston6,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_Piston6,vacuum,1;
+            WaitDI vacuum_switch,1;
+            MoveL ApproxPoint_Piston6,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_Piston6;
+            MoveL ApproxPoint6_ContainerBox4,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+            MoveLDO DetachPoint6_ContainerBox4,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4,vacuum,0;
+            WaitDI vacuum_switch,0;
+            MoveL ApproxPoint6_ContainerBox4,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+            Item:=TRUE;
+            waitTime 0.5;
+        ENDIF
+
+    ENDPROC
+
+    PROC Conveyor_Movements()
+        !!Box 1
+        SetDO startsys,1;
+        MoveL ApproxPoint1_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+        MoveLDO DetachPoint4_ContainerBox3,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3,vacuum,1;
+        WaitDI vacuum_switch,1;
+        MoveL ApproxPoint1_ContainerBox3,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveLDO DetachPoint_ConnectingRod,v400,fine,Vacuum_Gripper_TCP\WObj:=wobj0,vacuum,0;
+        WaitDI vacuum_switch,0;
+        MoveL ApproxPoint_ContainerBox2,v400,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint1_ContainerBox4,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+        MoveLDO DetachPoint1_ContainerBox4,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4,vacuum,1;
+        WaitDI vacuum_switch,1;
+        MoveL ApproxPoint1_ContainerBox4,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveLDO DetachPoint_Piston,v400,fine,Vacuum_Gripper_TCP\WObj:=wobj0,vacuum,0;
+        WaitDI vacuum_switch,0;
+        MoveL ApproxPoint_ContainerBox2,v400,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_PistonPin2,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_PistonPin2;
+        MoveLDO AttachPoint_PistonPin2,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_PistonPin2,vacuum,1;
+        WaitDI vacuum_switch,1;
+        MoveL ApproxPoint_PistonPin2,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_PistonPin2;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveLDO DetachPoint_PistonPin,v400,fine,Vacuum_Gripper_TCP\WObj:=wobj0,vacuum,0;
+        WaitDI vacuum_switch,0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL Home,v800,fine,Vacuum_Gripper_TCP\WObj:=wobj0;
+        SetDO conveyorsys,1;
+        WaitDI sensorsys,1;
+        SetDO startsys,0;
+        SetDO conveyorsys,0;
+
+        !!Box 2
+        SetDO startsys,1;
+        MoveL ApproxPoint2_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+        MoveLDO DetachPoint5_ContainerBox3,v200,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3,vacuum,1;
+        WaitDI vacuum_switch,1;
+        MoveL ApproxPoint2_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveLDO DetachPoint_ConnectingRod,v400,fine,Vacuum_Gripper_TCP\WObj:=wobj0,vacuum,0;
+        WaitDI vacuum_switch,0;
+        MoveL ApproxPoint_ContainerBox2,v400,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint2_ContainerBox4,v800,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+        MoveLDO DetachPoint2_ContainerBox4,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4,vacuum,1;
+        WaitDI vacuum_switch,1;
+        MoveL ApproxPoint2_ContainerBox4,v800,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveLDO DetachPoint_Piston,v400,fine,Vacuum_Gripper_TCP\WObj:=wobj0,vacuum,0;
+        WaitDI vacuum_switch,0;
+        MoveL ApproxPoint_ContainerBox2,v400,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_PistonPin1,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_PistonPin1;
+        MoveLDO AttachPoint_PistonPin1,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_PistonPin1,vacuum,1;
+        WaitDI vacuum_switch,1;
+        MoveL ApproxPoint_PistonPin1,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_PistonPin1;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveLDO DetachPoint_PistonPin,v400,fine,Vacuum_Gripper_TCP\WObj:=wobj0,vacuum,0;
+        WaitDI vacuum_switch,0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL Home,v800,fine,Vacuum_Gripper_TCP\WObj:=wobj0;
+        SetDO conveyorsys,1;
+        WaitDI sensorsys,1;
+        SetDO startsys,0;
+        SetDO conveyorsys,0;
+
+        !!Box 3
+        SetDO startsys,1;
+        MoveL ApproxPoint3_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+        MoveLDO DetachPoint6_ContainerBox3,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3,vacuum,1;
+        WaitDI vacuum_switch,1;
+        MoveL ApproxPoint3_ContainerBox3,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveLDO DetachPoint_ConnectingRod,v400,fine,Vacuum_Gripper_TCP\WObj:=wobj0,vacuum,0;
+        WaitDI vacuum_switch,0;
+        MoveL ApproxPoint_ContainerBox2,v400,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint3_ContainerBox4,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+        MoveLDO DetachPoint3_ContainerBox4,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4,vacuum,1;
+        WaitDI vacuum_switch,1;
+        MoveL ApproxPoint3_ContainerBox4,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveLDO DetachPoint_Piston,v400,fine,Vacuum_Gripper_TCP\WObj:=wobj0,vacuum,0;
+        WaitDI vacuum_switch,0;
+        MoveL ApproxPoint_ContainerBox2,v400,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_PistonPin3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_PistonPin3;
+        MoveLDO AttachPoint_PistonPin3,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_PistonPin3,vacuum,1;
+        WaitDI vacuum_switch,1;
+        MoveL ApproxPoint_PistonPin3,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_PistonPin3;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveLDO DetachPoint_PistonPin,v400,fine,Vacuum_Gripper_TCP\WObj:=wobj0,vacuum,0;
+        WaitDI vacuum_switch,0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL Home,v800,fine,Vacuum_Gripper_TCP\WObj:=wobj0;
+        SetDO conveyorsys,1;
+        WaitDI sensorsys,1;
+        SetDO startsys,0;
+        SetDO conveyorsys,0;
+
+        !Box 4
+        SetDO startsys,1;
+        MoveL ApproxPoint1_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+        MoveLDO DetachPoint1_ContainerBox3,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3,vacuum,1;
+        WaitDI vacuum_switch,1;
+        MoveL ApproxPoint1_ContainerBox3,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveLDO DetachPoint_ConnectingRod,v400,fine,Vacuum_Gripper_TCP\WObj:=wobj0,vacuum,0;
+        WaitDI vacuum_switch,0;
+        MoveL ApproxPoint_ContainerBox2,v400,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint4_ContainerBox4,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+        MoveLDO DetachPoint4_ContainerBox4,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4,vacuum,1;
+        WaitDI vacuum_switch,1;
+        MoveL ApproxPoint4_ContainerBox4,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveLDO DetachPoint_Piston,v400,fine,Vacuum_Gripper_TCP\WObj:=wobj0,vacuum,0;
+        WaitDI vacuum_switch,0;
+        MoveL ApproxPoint_ContainerBox2,v400,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_PistonPin4,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_PistonPin4;
+        MoveLDO AttachPoint_PistonPin4,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_PistonPin4,vacuum,1;
+        WaitDI vacuum_switch,1;
+        MoveL ApproxPoint_PistonPin4,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_PistonPin4;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveLDO DetachPoint_PistonPin,v400,fine,Vacuum_Gripper_TCP\WObj:=wobj0,vacuum,0;
+        WaitDI vacuum_switch,0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL Home,v800,fine,Vacuum_Gripper_TCP\WObj:=wobj0;
+        SetDO conveyorsys,1;
+        WaitDI sensorsys,1;
+        SetDO startsys,0;
+        SetDO conveyorsys,0;
+
+        !Box 5
+        SetDO startsys,1;
+        MoveL ApproxPoint2_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+        MoveLDO DetachPoint2_ContainerBox3,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3,vacuum,1;
+        WaitDI vacuum_switch,1;
+        MoveL ApproxPoint2_ContainerBox3,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveLDO DetachPoint_ConnectingRod,v400,fine,Vacuum_Gripper_TCP\WObj:=wobj0,vacuum,0;
+        WaitDI vacuum_switch,0;
+        MoveL ApproxPoint_ContainerBox2,v400,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint5_ContainerBox4,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+        MoveLDO DetachPoint5_ContainerBox4,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4,vacuum,1;
+        WaitDI vacuum_switch,1;
+        MoveL ApproxPoint5_ContainerBox4,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveLDO DetachPoint_Piston,v400,fine,Vacuum_Gripper_TCP\WObj:=wobj0,vacuum,0;
+        WaitDI vacuum_switch,0;
+        MoveL ApproxPoint_ContainerBox2,v400,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_PistonPin5,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_PistonPin5;
+        MoveLDO AttachPoint_PistonPin5,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_PistonPin5,vacuum,1;
+        WaitDI vacuum_switch,1;
+        MoveL ApproxPoint_PistonPin5,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_PistonPin5;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveLDO DetachPoint_PistonPin,v400,fine,Vacuum_Gripper_TCP\WObj:=wobj0,vacuum,0;
+        WaitDI vacuum_switch,0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL Home,v800,fine,Vacuum_Gripper_TCP\WObj:=wobj0;
+        SetDO conveyorsys,1;
+        WaitDI sensorsys,1;
+        SetDO startsys,0;
+        SetDO conveyorsys,0;
+
+        !Box 6
+        SetDO startsys,1;
+        MoveL ApproxPoint3_ContainerBox3,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+        MoveLDO DetachPoint3_ContainerBox3,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3,vacuum,1;
+        WaitDI vacuum_switch,1;
+        MoveL ApproxPoint3_ContainerBox3,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox3;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveLDO DetachPoint_ConnectingRod,v400,fine,Vacuum_Gripper_TCP\WObj:=wobj0,vacuum,0;
+        WaitDI vacuum_switch,0;
+        MoveL ApproxPoint_ContainerBox2,v400,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint6_ContainerBox4,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+        MoveLDO DetachPoint6_ContainerBox4,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4,vacuum,1;
+        WaitDI vacuum_switch,1;
+        MoveL ApproxPoint6_ContainerBox4,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_ContainerBox4;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveLDO DetachPoint_Piston,v400,fine,Vacuum_Gripper_TCP\WObj:=wobj0,vacuum,0;
+        WaitDI vacuum_switch,0;
+        MoveL ApproxPoint_ContainerBox2,v400,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_PistonPin6,v800,z30,Vacuum_Gripper_TCP\WObj:=Wobj_PistonPin6;
+        MoveLDO AttachPoint_PistonPin6,v400,fine,Vacuum_Gripper_TCP\WObj:=Wobj_PistonPin6,vacuum,1;
+        WaitDI vacuum_switch,1;
+        MoveL ApproxPoint_PistonPin6,v400,z30,Vacuum_Gripper_TCP\WObj:=Wobj_PistonPin6;
+        MoveL ApproxPoint_Home,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveLDO DetachPoint_PistonPin,v400,fine,Vacuum_Gripper_TCP\WObj:=wobj0,vacuum,0;
+        WaitDI vacuum_switch,0;
+        MoveL ApproxPoint_ContainerBox2,v800,z30,Vacuum_Gripper_TCP\WObj:=wobj0;
+        MoveL Home,v800,fine,Vacuum_Gripper_TCP\WObj:=wobj0;
+        SetDO conveyorsys,1;
+        WaitDI sensorsys,1;
+        SetDO startsys,0;
+        SetDO conveyorsys,0;
+    ENDPROC
+
+    PROC main()
+        !Reset variables
+        RUN:=TRUE;
+        Item:=TRUE;
+        ! i:=0;
+        mydata:="";
+        WaitTime 5;
+        reset vacuum;
+        Reset startsys;
+        Reset conveyorsys;
+        
+        MoveL Home,v800,fine,Vacuum_Gripper_TCP\WObj:=wobj0;
+        WHILE (socketStat1=SOCKET_CONNECTED) DO
+            IF Ready=TRUE THEN
+                Pieces_Separation;
+                waitTime 0.1;
+            ENDIF
+        ENDWHILE
+        MoveL Home,v800,fine,Vacuum_Gripper_TCP\WObj:=wobj0;
+        Conveyor_Movements;
+        MoveL Home,v800,fine,Vacuum_Gripper_TCP\WObj:=wobj0;
+        Item:=FALSE;
+        RUN:=FALSE;
+    ENDPROC
+ENDMODULE
